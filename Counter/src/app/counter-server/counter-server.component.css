@@ -1,0 +1,16 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+ }
+md-card{
+    padding: 5px;
+    width: 50%;
+}
+app-counter{
+    margin: 10px;
+    padding: 10px;
+}
+.btn{
+    flex: 1 1 auto;
+}
