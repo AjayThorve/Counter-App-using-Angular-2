@@ -1,7 +1,9 @@
-  <md-card>
-    <app-counter-creater (click)="onFocus()"></app-counter-creater>
+  <md-card class="createrPosition">
+    <app-counter-creater (counterCreated)="onClickAddCounterButton($event)" ></app-counter-creater>
 
-    <button md-raised-button	class="btn btn-primary" *ngIf="!Searchbar" (click)="onClickAddCounterButton()">Add Counter!</button>
   </md-card>
 
-<div class="cards"><app-counter *ngFor="let server of CounterArray"></app-counter></div>
+<div class="cards"><app-counter *ngFor="let server of CounterArray"
+                                [CountElement]='server'
+>
+                                </app-counter></div>

@@ -1,5 +1,11 @@
 <div class="searchbar">
-    <md-input-container>
-      <input mdInput placeholder="" #CategoryName value="">
+    <md-input-container (click)="onFocus()">
+      <input mdInput placeholder="Enter Catergory Name" [(ngModel)]="name" value="">
     </md-input-container>
+    <md-input-container [hidden]="Searchbar">
+      <input mdInput placeholder="Enter Description" [(ngModel)]="desc" value="">
+    </md-input-container>
+
+    <button md-raised-button	class="btn btn-primary" [hidden]="Searchbar" (click)="onClickAddCounterButton()">Add Counter!</button>
+
 </div>

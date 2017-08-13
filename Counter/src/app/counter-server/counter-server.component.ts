@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Output}       from '@angular/core'
-import {EventEmitter} from '@angular/core'
+
 
 @Component({
   selector: 'app-counter-server',
@@ -8,20 +7,24 @@ import {EventEmitter} from '@angular/core'
   styleUrls: ['./counter-server.component.css']
 })
 export class CounterServerComponent implements OnInit {
-  CounterName='';
-  CounterArray=["1"];
-  Searchbar=true;
+  CounterName= 'Welcome Angular 2 world';
+  CounterDesc= 'This is my first Counter';
+  CounterArray= [{Name: this.CounterName, Desc: this.CounterDesc, Count: 0}];
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClickAddCounterButton(){
-    this.CounterArray.push(this.CounterName);
+  onClickAddCounterButton(counterData: {Name: string, Desc: string, Count: number}) {
+    if(counterData.Name) {
+      this.CounterArray.push({
+        Name: counterData.Name,
+        Desc: counterData.Desc,
+        Count: counterData.Count
+      });
+    }
   }
 
-  onFocus(){
-    this.Searchbar=false;
-    console.log("haha");
-  }
+
 }

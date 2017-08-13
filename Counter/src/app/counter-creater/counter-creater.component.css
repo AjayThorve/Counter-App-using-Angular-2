@@ -5,3 +5,6 @@ text-align: center;
 md-input-container{
     width:95%;
 }
+
+[hidden] { display: none !important;}
+

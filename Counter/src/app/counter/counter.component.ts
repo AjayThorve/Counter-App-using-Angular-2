@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -6,28 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit {
-  Count=0;
-  isEdit="hide";
-  Name:string="";
-  a="s";
-  Details="";
+  @Input() CountElement: {Name: string, Desc: string, Count: number};
+
+  Count = 0;
+  isEdit= 'hide';
+
   constructor() {
-    this.Count=0;
-    this.isEdit="hide";
-    this.Name="Category Name";
-    this.Details="Enter details about the category(optional)";
    }
 
   ngOnInit() {
+    this.Count = this.CountElement.Count;
   }
 
-  onMinus(){
-    if(this.Count>0){
+  onMinus() {
+    if (this.Count > 0) {
       this.Count--;
     }
   }
 
-  onPlus(){
+  onPlus() {
     this.Count++;
   }
 }

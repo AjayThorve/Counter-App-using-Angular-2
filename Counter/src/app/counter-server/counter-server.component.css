@@ -11,6 +11,9 @@ app-counter{
     margin: 10px;
     padding: 10px;
 }
+.createrPosition{
+  margin-left: 25%;
+}
 .btn{
     flex: 1 1 auto;
 }
