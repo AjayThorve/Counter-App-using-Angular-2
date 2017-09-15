@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 #Demo
-![Alt Text](gs://my-website-66037.appspot.com/ezgif.com-video-to-gif (1).gif)
+![Alt Text](https://firebasestorage.googleapis.com/v0/b/my-website-66037.appspot.com/o/ezgif.com-video-to-gif%20(1).gif?alt=media&token=48f78582-11f9-41d9-8989-3cf782ff3616)
 
 
 
